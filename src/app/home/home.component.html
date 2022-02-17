@@ -1,0 +1,19 @@
+<div >
+    <div class="grid grid-cols-12 gap-3">
+        <div  *ngFor="let ud of userData" class="max-w-sm bg-white shadow-lg rounded-lg overflow-hidden m-6 col-span-12 lg:col-span-3 md:col-span-4 sm:col-span-6">
+            <img class="w-full h-56 object-cover object-center" src="{{ud.avatar}}" alt="avatar">
+            <div class="py-4 px-6">
+                <h1 class="text-2xl font-semibold text-gray-800">{{ud.first_name+" "+ud.last_name}}</h1>
+                <div class="flex items-center mt-2 text-gray-700">
+                    <svg class="h-6 w-6 fill-current" viewBox="0 0 512 512">
+                        <path d="M437.332 80H74.668C51.199 80 32 99.198 32 122.667v266.666C32 412.802 51.199 432 74.668 432h362.664C460.801 432 480 412.802 480 389.333V122.667C480 99.198 460.801 80 437.332 80zM432 170.667L256 288 80 170.667V128l176 117.333L432 128v42.667z"/>
+                    </svg>
+                    <h1 class="px-2 text-sm">{{ud.email}}</h1>
+                </div>
+                <div class="mt-5">
+                    <button (click)="goToView(ud)" class="bg-teal-800 px-4 py-2 text-white font-medium" >View User</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
